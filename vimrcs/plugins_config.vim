@@ -8,13 +8,21 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-let s:vim_runtime = expand('<sfile>:p:h')."/.."
-call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
-call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
-call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
-call pathogen#helptags()
+"let s:vim_runtime = expand('<sfile>:p:h')."/.."
+"call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
+"call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
+"call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
+"call pathogen#helptags()
 
+""""""""""""""""""""""""""""""
+" => Load vim-plug paths
+""""""""""""""""""""""""""""""
+call plug#begin('~/.vim_runtime/my_plugins')
 
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+call plug#end()
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
