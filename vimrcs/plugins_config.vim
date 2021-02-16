@@ -21,7 +21,9 @@ call plug#begin('~/.vim_runtime/my_plugins')
 
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'gennaro-tedesco/nvim-peekup'
+Plug 'zhou13/vim-easyescape'
 call plug#end()
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -31,6 +33,13 @@ let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
+
+""""""""""""""""""""""""""""""
+" => EasyEscape plugin
+""""""""""""""""""""""""""""""
+let g:easyescape_chars = { "j": 2 }
+let g:easyescape_timeout = 100
+cnoremap jj <ESC>
 
 
 """"""""""""""""""""""""""""""

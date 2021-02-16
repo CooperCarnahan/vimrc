@@ -141,7 +141,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme material-theme 
+    colorscheme material
 catch
 endtry
 
