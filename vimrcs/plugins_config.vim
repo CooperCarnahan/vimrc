@@ -24,7 +24,21 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'gennaro-tedesco/nvim-peekup'
 Plug 'zhou13/vim-easyescape'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
+
+""""""""""""""""""""""""""""""
+" => Airline plugin
+""""""""""""""""""""""""""""""
+let g:airline_theme='deus'
+let g:airline#extensions#tabline#enabled = 1
+" set tabline path formatter to show most of path
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
@@ -101,7 +115,7 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
