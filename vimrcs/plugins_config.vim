@@ -21,6 +21,8 @@ call plug#begin('~/.vim_runtime/my_plugins')
 
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'gennaro-tedesco/nvim-peekup'
 Plug 'zhou13/vim-easyescape'
@@ -29,6 +31,10 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'yegappan/mru'
+" Always leave devicons for last
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 """"""""""""""""""""""""""""""
@@ -79,13 +85,13 @@ let g:ctrlp_working_path_mode = 0
 
 " Quickly find and open a file in the current working directory
 let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
+map <leader>f :CtrlP<cr>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
 
 " Quickly find and open a recently opened file
-map <leader>f :CtrlPMRU<CR>
+map <leader>r :CtrlPMRU<CR>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -123,6 +129,7 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
