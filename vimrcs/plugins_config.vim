@@ -58,7 +58,7 @@ map <leader>o :BufExplorer<cr>
 " => EasyEscape plugin
 """"""""""""""""""""""""""""""
 let g:easyescape_chars = { "j": 2 }
-let g:easyescape_timeout = 100
+let g:easyescape_timeout = 2000
 cnoremap jj <ESC>
 
 
