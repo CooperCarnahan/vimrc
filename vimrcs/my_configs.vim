@@ -30,3 +30,4 @@ set splitbelow
 set splitright
 nnoremap J :tabp<cr>
 nnoremap K :tabn<cr>
+
