@@ -34,10 +34,19 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'yegappan/mru'
 Plug 'mileszs/ack.vim'
-" Always leave devicons for last
+Plug 'tpope/vim-commentary'
+Plug 'w0rp/ale'
+Plug 'luochen1990/rainbow'
+" always leave devicons for last
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+
+""""""""""""""""""""""""""""""
+" => Rainbow Parentheses plugin
+""""""""""""""""""""""""""""""
+ let g:rainbow_active = 1
+ 
 """"""""""""""""""""""""""""""
 " => Material plugin
 """"""""""""""""""""""""""""""
@@ -51,8 +60,13 @@ if (has('termguicolors'))
 endif
 " Disable augmenting background in vim
 hi Normal guibg=NONE ctermbg=NONE
+
+"Change line number color to something readable
+hi LineNr guifg=#cfd8dc 
+hi LineNr ctermfg=White
+
 """"""""""""""""""""""""""""""
-" => Airline plugin
+"     Airline plugin
 """"""""""""""""""""""""""""""
 let g:airline_theme='deus'
 let g:airline#extensions#tabline#enabled = 1
